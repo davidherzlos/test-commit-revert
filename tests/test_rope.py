@@ -45,8 +45,14 @@ class Concatenation(Rope):
         return str(self.left) + str(self.right)
 
 # Testing Framework
-def equals():
-    pass
+def equals(expected, rope):
+    actual = str(rope)
+    if actual == expected:
+        return
+
+    print(actual, "didn't equals", expected)
+    raise Exception()
+    
 
 assert str(to_rope("abc")) == "abc"
 assert str(to_rope("abcde").substring(1, 3)) == "bcd"
