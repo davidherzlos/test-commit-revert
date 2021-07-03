@@ -19,7 +19,7 @@ class Rope(object):
     
     def delete(self, start, length):
         left = self.substring(0, start)
-        right = self.substring(start  + length, self.length() - start - length)
+        right = self.substring(start  + length, self.length() - start - length) # Not very readable
         return left.concatenate(right)
     
     def insert(self, rope, start):
