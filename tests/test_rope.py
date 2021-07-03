@@ -31,17 +31,20 @@ class String(Rope):
         return left.concatenate(right)
     
     def length(self):
-        return len(str(self.string))
+        return len(self.string)
 
 
 class Substring(Rope):
     def __init__(self, rope, start, length):
         self.rope = rope
         self.start = start
-        self.length = length
+        self.leng = length
 
     def __str__(self):
-        return str(self.rope)[self.start:self.start + self.length]
+        return str(self.rope)[self.start:self.start + self.leng]
+    
+    def length(self):
+        return str(self.leng)
 
 
 class Concatenation(Rope):
@@ -68,3 +71,4 @@ equals(to_rope("abcde").substring(1, 3).substring(1, 1), "c")
 equals(to_rope("abc").concatenate(to_rope("de")), "abcde")
 
 equals(to_rope("abcde").delete(1, 3), "ae")
+equals(to_rope("abcde").substring(1, 3).length(), "3")
