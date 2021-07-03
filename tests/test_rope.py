@@ -14,7 +14,7 @@ class Rope:
     def substring(self, start, length):
         return Substring(self, start, length)
     
-    def concatenate(self, rope):
+    def concatenate(self, right):
         return "abcde"
 
 
