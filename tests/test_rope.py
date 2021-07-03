@@ -45,7 +45,7 @@ class Concatenation(Rope):
         return str(self.left) + str(self.right)
 
 # Testing Framework
-def equals(expected, rope):
+def equals(rope, expected):
     actual = str(rope)
     if actual == expected:
         return
@@ -54,7 +54,7 @@ def equals(expected, rope):
     raise Exception()
     
 
-assert str(to_rope("abc")) == "abc"
+equals(to_rope("abc"), "abc")
 assert str(to_rope("abcde").substring(1, 3)) == "bcd"
 assert str(to_rope("abcde").substring(1, 3).substring(1, 1)) == "c"
 assert str(to_rope("abc").concatenate(to_rope("de"))) == "abcde"
