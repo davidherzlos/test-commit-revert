@@ -18,7 +18,8 @@ class Rope(object):
         return Concatenation(self, right)
     
     def delete(self, start, length):
-        return "a" + "e"
+        left = "a"
+        return left + "e"
 
 class String(Rope):
     def __init__(self, string):
