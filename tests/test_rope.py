@@ -43,13 +43,13 @@ class Substring(Rope):
     def __init__(self, rope, start, length):
         self.rope = rope
         self.start = start
-        self.leng = length
+        self.len = length
 
     def __str__(self):
-        return str(self.rope)[self.start:self.start + self.leng]
+        return str(self.rope)[self.start:self.start + self.len]
     
     def length(self):
-        return self.leng
+        return self.len
 
 
 class Concatenation(Rope):
