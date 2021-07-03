@@ -18,15 +18,6 @@ class Rope(object):
         return Concatenation(self, right)
 
 
-class Concatenation(Rope):
-    def __init__(self, left, right):
-        self.left = left
-        self.right = right
-    
-    def __str__(self):
-        return str(self.left) + str(self.right)
-    
-
 class String(Rope):
     def __init__(self, string):
         self.string = string
@@ -43,6 +34,15 @@ class Substring(Rope):
 
     def __str__(self):
         return str(self.rope)[self.start:self.start + self.length]
+
+
+class Concatenation(Rope):
+    def __init__(self, left, right):
+        self.left = left
+        self.right = right
+    
+    def __str__(self):
+        return str(self.left) + str(self.right)
 
 assert str(to_rope("abc")) == "abc"
 assert str(to_rope("abcde").substring(1, 3)) == "bcd"
