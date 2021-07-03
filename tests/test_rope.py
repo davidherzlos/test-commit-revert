@@ -81,4 +81,5 @@ equals(to_rope("abcde").delete(1, 3), "ae")
 
 assert to_rope("abcde").substring(1, 3).length() == 3
 assert to_rope("abc").concatenate(to_rope("de")).length() == 5
+
 equals(to_rope("abe").insert(to_rope("cd"), 2), "abcde")
