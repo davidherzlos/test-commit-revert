@@ -13,14 +13,18 @@ def to_rope(string):
 class Rope:
     def substring(self, start, length):
         return Substring(self, start, length)
-    
+     
     def concatenate(self, right):
-        return Concatenation()
+        return Concatenation(self, right)
 
 
 class Concatenation(Rope):
+    def __init__(self, left, right):
+        self.left = left
+        self.right = right
+    
     def __str__(self):
-        return "abcde"
+        return str(self.left) + str(self.right)
     
 
 class String(Rope):
