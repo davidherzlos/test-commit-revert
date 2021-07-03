@@ -18,7 +18,7 @@ class Rope():
         return self.string
 
     def substring(self, start, length):
-        return "bcd"
+        return self.string[start:length]
 
 assert str(to_rope("abc")) == "abc"
-assert str(to_rope("abcde").substring(1, 3)) == "bcd"
+assert str(to_rope("abcde").substring(1, 3)) == "bc"
