@@ -19,11 +19,11 @@ class Rope:
 
 
 
-class Concatenation:
+class Concatenation(Rope):
     def __str__(self):
         return "abcde"
     
-    
+
 class String(Rope):
     def __init__(self, string):
         self.string = string
