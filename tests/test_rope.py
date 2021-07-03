@@ -44,7 +44,7 @@ class Substring(Rope):
         return str(self.rope)[self.start:self.start + self.leng]
     
     def length(self):
-        return str(self.leng)
+        return self.leng
 
 
 class Concatenation(Rope):
@@ -74,5 +74,5 @@ equals(to_rope("abcde").substring(1, 3).substring(1, 1), "c")
 equals(to_rope("abc").concatenate(to_rope("de")), "abcde")
 
 equals(to_rope("abcde").delete(1, 3), "ae")
-equals(to_rope("abcde").substring(1, 3).length(), "3")
-equals(to_rope("abc").concatenate(to_rope("de")).length(), "5")
+assert to_rope("abcde").substring(1, 3).length() == 3
+assert to_rope("abc").concatenate(to_rope("de")).length() == 5
