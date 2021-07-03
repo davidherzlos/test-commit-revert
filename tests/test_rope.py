@@ -11,18 +11,16 @@ def to_rope(string):
 
 
 class Rope:
-    pass
+    def substring(self, start, length):
+        return Substring(self, start, length)
 
 
-class String():
+class String(Rope):
     def __init__(self, string):
         self.string = string
     
     def __str__(self):
         return self.string
-
-    def substring(self, start, length):
-        return Substring(self, start, length)
 
 
 class Substring:
