@@ -19,7 +19,8 @@ class Rope(object):
     
     def delete(self, start, length):
         left = "a"
-        return left + "e"
+        right = "e"
+        return left + right
 
 class String(Rope):
     def __init__(self, string):
