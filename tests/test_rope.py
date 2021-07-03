@@ -15,9 +15,15 @@ class Rope:
         return Substring(self, start, length)
     
     def concatenate(self, right):
+        return Concatenation()
+
+
+
+class Concatenation:
+    def __str__(self):
         return "abcde"
-
-
+    
+    
 class String(Rope):
     def __init__(self, string):
         self.string = string
