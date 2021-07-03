@@ -23,7 +23,7 @@ class Rope(object):
         return left.concatenate(right)
     
     def insert(self, rope, start):
-        return "abcde" 
+        return "abcde"
     
 
 class String(Rope):
