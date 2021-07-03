@@ -17,7 +17,6 @@ class Rope:
     def concatenate(self, right):
         return Concatenation()
 
-
 class Concatenation(Rope):
     def __str__(self):
         return "abcde"
