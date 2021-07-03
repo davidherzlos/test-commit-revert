@@ -56,7 +56,7 @@ class Concatenation(Rope):
         return str(self.left) + str(self.right)
     
     def length(self):
-        return 5
+        return self.left.length() + self.right.length()
 
 # Testing Framework
 def equals(rope, expected):
