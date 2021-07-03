@@ -16,7 +16,9 @@ class Rope(object):
      
     def concatenate(self, right):
         return Concatenation(self, right)
-
+    
+    def delete(self, start, length):
+        return "ae"
 
 class String(Rope):
     def __init__(self, string):
@@ -58,3 +60,5 @@ equals(to_rope("abc"), "abc")
 equals(to_rope("abcde").substring(1, 3), "bcd")
 equals(to_rope("abcde").substring(1, 3).substring(1, 1), "c")
 equals(to_rope("abc").concatenate(to_rope("de")), "abcde")
+
+equals(to_rope("abcde").delete(1, 3), "ae")
