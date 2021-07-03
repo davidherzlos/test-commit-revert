@@ -7,7 +7,7 @@
 # API
 def to_rope(string):
     return String(string)
- 
+
 
 class Rope(object):
     def substring(self, start, length):
