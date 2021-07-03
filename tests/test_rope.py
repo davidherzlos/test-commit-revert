@@ -1,9 +1,8 @@
 # Rope
 
-# insert
-# delete
-# substring
-# concatenation
+# todo
+# [] notation
+# len() function
 
 # API
 def to_rope(string):
