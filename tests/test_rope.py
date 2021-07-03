@@ -3,6 +3,7 @@
 # todo
 # [] notation
 # len() function
+# + for concatenation
 
 # API
 def to_rope(string):
