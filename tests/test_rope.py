@@ -7,6 +7,6 @@
 
 # API
 def to_rope(string):
-    return "abc"
+    return string
 
 assert str(to_rope("abc")) == "abc"
