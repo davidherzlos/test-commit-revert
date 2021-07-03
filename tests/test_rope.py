@@ -8,7 +8,7 @@
 # API
 def to_rope(string):
     return String(string)
-
+ 
 
 class Rope(object):
     def substring(self, start, length):
@@ -18,7 +18,7 @@ class Rope(object):
         return Concatenation(self, right)
     
     def delete(self, start, length):
-        return "ae"
+        return "a" + "e"
 
 class String(Rope):
     def __init__(self, string):
