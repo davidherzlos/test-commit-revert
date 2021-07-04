@@ -2,7 +2,6 @@
 
 # todo
 # [] notation
-# len() function
 # + for concatenation
 
 # API
