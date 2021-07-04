@@ -90,5 +90,3 @@ assert len(to_rope("abcde").substring(1, 3)) == 3
 assert len(to_rope("abc") + to_rope("de")) == 5
 
 equals(to_rope("abe").insert(to_rope("cd"), 2), "abcde")
-
-to_rope("abc")[1:3]
