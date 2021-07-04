@@ -10,9 +10,6 @@ def to_rope(string):
 
 
 class Rope(object):
-    def substring(self, start, length):
-        return Substring(self, start, length)
-    
     def __add__(self, addend):
         return Concatenation(self, addend)
     
