@@ -3,7 +3,7 @@ A simple example of a code written with TCR (test && commit || revert ) programm
 
 # Intro
 In TCR you write a little test and its real code, if the test pass your change is commited, if not your code is hard reverted just before starting going wrong.
-This is interesting since you need to take really tiny steps in order to get things working, and also to avoid retyping so much code again. :)
+This is interesting since you need to take really tiny steps in order to get things working, and also to avoid retyping so much code again when you fail. :)
 Also you get instant feedback about every code decision you do.
 
 # So...
