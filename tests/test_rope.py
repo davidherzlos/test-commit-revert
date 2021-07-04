@@ -17,7 +17,6 @@ class Rope(object):
         return Concatenation(self, addend)
     
     def __getitem__(self, slice):
-        print(slice)
         return self.substring(slice.start, slice.stop - slice.start)
         
     
@@ -80,7 +79,7 @@ def equals(rope, expected):
     
 
 equals(to_rope("abc"), "abc")
-equals(to_rope("abcde").substring(1, 3), "bcd")
+equals(to_rope("abcde")[1:4], "bcd")
 equals(to_rope("abcde").substring(1, 3).substring(1, 1), "c")
 equals(to_rope("abc") + to_rope("de"), "abcde")
 
