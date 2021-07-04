@@ -8,8 +8,8 @@ Also you get instant feedback about every code decision you do.
 
 # So...
 Many people could hate this when they find themself not reaching something relevant without get the code reverted many times, me included, 
-however it starts paying you once you get the workflow's point. At the end of the day it is jus TDD, but with some tweaks that leaves no 
-place for errors. Try it, it is fun!
+however it starts paying you once you get the workflow's point. At the end of the day it is jus TDD, but with some tweaks that closes much 
+more the place for errors, bugs and ideally bad code design. Try it, it is fun!
 
 # Credits
 Original tutorial here: [TCR, by Kent Beck... ](https://www.youtube.com/watch?v=Aof0F9DvTFg&list=PLlmVY7qtgT_nhLyIbeAaUlFOWbWT5y53t)
