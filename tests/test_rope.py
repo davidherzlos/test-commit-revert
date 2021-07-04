@@ -12,9 +12,6 @@ def to_rope(string):
 class Rope(object):
     def substring(self, start, length):
         return Substring(self, start, length)
-     
-    def concatenate(self, right):
-        return Concatenation(self, right)
     
     def __add__(self, addend):
         return Concatenation(self, addend)
