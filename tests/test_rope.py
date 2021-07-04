@@ -26,7 +26,7 @@ class Rope(object):
         return left + right
     
     def insert(self, rope, start):
-        left = self.substring(0, start)
+        left = self[0:start]
         right = self.substring(start, len(self) - start) # Not very readable
         return left + rope + right
     
