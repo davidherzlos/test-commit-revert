@@ -75,7 +75,8 @@ class Concatenation(Rope):
     def _get_single_item(self, index):
         if index < len(self.left):
             return "c"
-        return self.right[index - len(self.left)]
+        else:
+            return self.right[index - len(self.left)]
 
 # Testing Framework
 def equals(rope, expected):
