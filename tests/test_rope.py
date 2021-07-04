@@ -22,12 +22,12 @@ class Rope(object):
     
     def delete(self, start, length):
         left = self[0:start]
-        right = self[start + length : len(self)] # Not very readable
+        right = self[start + length : len(self)]
         return left + right
     
     def insert(self, rope, start):
         left = self[0:start]
-        right = self[start : len(self)] # Not very readable
+        right = self[start : len(self)]
         return left + rope + right
     
     def __len__(self):
