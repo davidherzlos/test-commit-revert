@@ -19,12 +19,12 @@ class Rope(object):
     
     def delete(self, start, length):
         left = self.substring(0, start)
-        right = self.substring(start  + length, self.length() - start - length) # Not very readable
+        right = self.substring(start  + length, len(self) - start - length) # Not very readable
         return left.concatenate(right)
     
     def insert(self, rope, start):
         left = self.substring(0, start)
-        right = self.substring(start, self.length() - start) # Not very readable
+        right = self.substring(start, len(self) - start) # Not very readable
         return left.concatenate(rope).concatenate(right)
 
     def length(self):
@@ -41,6 +41,8 @@ class String(Rope):
     def length(self):
         return len(self.string)
 
+    def __len__(self):
+        return self.length()
 
 class Substring(Rope):
     def __init__(self, rope, start, length):
