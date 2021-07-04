@@ -38,11 +38,11 @@ class String(Rope):
     def __init__(self, string):
         self.string = string
     
-    def __str__(self):
-        return self.string
-
     def __len__(self):
         return len(self.string)
+    
+    def __str__(self):
+        return self.string
     
     def _get_single_item(self, index):
         return self.string[index]
