@@ -22,7 +22,7 @@ class Rope(object):
     
     def delete(self, start, length):
         left = self[0:start]
-        right = self.substring(start  + length, len(self) - start - length) # Not very readable
+        right = self[start + length : len(self)] # Not very readable
         return left + right
     
     def insert(self, rope, start):
