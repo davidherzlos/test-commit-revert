@@ -30,9 +30,6 @@ class Rope(object):
     def length(self):
         raise Exception('Should have been overriden')
     
-    def __len__(self):
-        return self.length()
-    
 
 class String(Rope):
     def __init__(self, string):
@@ -44,6 +41,8 @@ class String(Rope):
     def length(self):
         return len(self.string)
 
+    def __len__(self):
+        return len(self.string)
 
 class Substring(Rope):
     def __init__(self, rope, start, length):
@@ -56,6 +55,9 @@ class Substring(Rope):
     
     def length(self):
         return self.len
+    
+    def __len__(self):
+        return self.len
 
 
 class Concatenation(Rope):
@@ -67,6 +69,9 @@ class Concatenation(Rope):
         return str(self.left) + str(self.right)
     
     def length(self):
+        return self.left.length() + self.right.length()
+    
+    def __len__(self):
         return self.left.length() + self.right.length()
 
 # Testing Framework
