@@ -25,7 +25,6 @@ class Rope(object):
     def __getitem__(self, index):
         if type(index) == int:
             return self._get_single_item(index)
-
         return Substring(self, index.start, index.stop - index.start)
     
     def __len__(self):
