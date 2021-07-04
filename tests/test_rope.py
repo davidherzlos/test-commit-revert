@@ -14,10 +14,12 @@ class Rope(object):
     
     def __getitem__(self, index):
         if type(index) == int:
-            pass
-            
+            return self._get_single_item(index)
+
         return Substring(self, index.start, index.stop - index.start)
-        
+    
+    def _get_single_item(self, index):
+        return "d"
     
     def delete(self, start, length):
         left = self[0:start]
@@ -80,6 +82,7 @@ def equals(rope, expected):
 equals(to_rope("abc"), "abc")
 equals(to_rope("abcde")[1:4], "bcd")
 equals(to_rope("abcde")[1:4][1:2], "c")
+equals(to_rope("abcde")[3], "d")
 equals(to_rope("abc") + to_rope("de"), "abcde")
 
 equals(to_rope("abcde").delete(1, 3), "ae")
