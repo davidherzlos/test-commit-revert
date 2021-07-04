@@ -69,11 +69,11 @@ class Concatenation(Rope):
         self.left = left
         self.right = right
     
-    def __str__(self):
-        return str(self.left) + str(self.right)
-    
     def __len__(self):
         return len(self.left) + len(self.right)
+    
+    def __str__(self):
+        return str(self.left) + str(self.right)
     
     def _get_single_item(self, index):
         if index < len(self.left):
