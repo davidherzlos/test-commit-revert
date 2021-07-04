@@ -18,7 +18,9 @@ class Rope(object):
         left = self[0:start]
         right = self[start : len(self)]
         return left + rope + right
-    
+    def _get_single_item(self, index):
+        raise Exception('Should have been overriden')
+        
     def __add__(self, addend):
         return Concatenation(self, addend)
     
@@ -28,9 +30,6 @@ class Rope(object):
         return Substring(self, index.start, index.stop - index.start)
     
     def __len__(self):
-        raise Exception('Should have been overriden')
-    
-    def _get_single_item(self, index):
         raise Exception('Should have been overriden')
     
 
