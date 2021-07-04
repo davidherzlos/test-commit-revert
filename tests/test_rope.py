@@ -37,9 +37,6 @@ class String(Rope):
     
     def __str__(self):
         return self.string
-    
-    def length(self):
-        return len(self.string)
 
     def __len__(self):
         return len(self.string)
