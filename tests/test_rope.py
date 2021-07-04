@@ -1,7 +1,6 @@
 # Rope
 
 # todo
-# [] notation
 # reorder rope
 
 # API
