@@ -50,6 +50,8 @@ class String(Rope):
 
 
 class Substring(Rope):
+    def _get_single_item(self, index):
+        return self.rope[index + self.start]
     def __init__(self, rope, start, length):
         self.rope = rope
         self.start = start
@@ -60,9 +62,6 @@ class Substring(Rope):
     
     def __len__(self):
         return self.len
-    
-    def _get_single_item(self, index):
-        return self.rope[index + self.start]
 
 
 class Concatenation(Rope):
