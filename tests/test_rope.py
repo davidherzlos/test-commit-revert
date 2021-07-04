@@ -49,18 +49,19 @@ class String(Rope):
 
         
 class Substring(Rope):
-    def _get_single_item(self, index):
-        return self.rope[index + self.start]
     def __init__(self, rope, start, length):
         self.rope = rope
         self.start = start
         self.len = length
+    
+    def __len__(self):
+        return self.len
 
     def __str__(self):
         return str(self.rope)[self.start:self.start + self.len]
     
-    def __len__(self):
-        return self.len
+    def _get_single_item(self, index):
+        return self.rope[index + self.start]
 
 
 class Concatenation(Rope):
