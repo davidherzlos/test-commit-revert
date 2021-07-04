@@ -1,13 +1,10 @@
 # Rope
 
-# todo
-# reorder rope
-
 # API
 def to_rope(string):
     return String(string)
 
-
+# Implementation
 class Rope(object):
     def delete(self, start, length):
         left = self[0:start]
