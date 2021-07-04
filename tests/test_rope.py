@@ -26,6 +26,9 @@ class Rope(object):
         left = self.substring(0, start)
         right = self.substring(start, self.length() - start) # Not very readable
         return left.concatenate(rope).concatenate(right)
+
+    def length(self):
+        raise Exception('Should have been overriden')
     
 
 class String(Rope):
