@@ -2,6 +2,7 @@
 
 # todo
 # [] notation
+# reorder rope
 
 # API
 def to_rope(string):
