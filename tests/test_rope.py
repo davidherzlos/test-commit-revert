@@ -18,9 +18,6 @@ class Rope(object):
 
         return Substring(self, index.start, index.stop - index.start)
     
-    def _get_single_item(self, index):
-        return "d"
-    
     def delete(self, start, length):
         left = self[0:start]
         right = self[start + length : len(self)]
@@ -44,6 +41,9 @@ class String(Rope):
 
     def __len__(self):
         return len(self.string)
+    
+    def _get_single_item(self, index):
+        return "d"
 
 class Substring(Rope):
     def __init__(self, rope, start, length):
