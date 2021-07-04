@@ -50,9 +50,6 @@ class Substring(Rope):
     def __str__(self):
         return str(self.rope)[self.start:self.start + self.len]
     
-    def length(self):
-        return self.len
-    
     def __len__(self):
         return self.len
 
