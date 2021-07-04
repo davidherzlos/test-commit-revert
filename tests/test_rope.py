@@ -31,6 +31,9 @@ class Rope(object):
     def __len__(self):
         raise Exception('Should have been overriden')
     
+    def _get_single_item(self, index):
+        raise Exception('Should have been overriden')
+    
 
 class String(Rope):
     def __init__(self, string):
