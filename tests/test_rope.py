@@ -36,6 +36,9 @@ class Rope(object):
     
 
 class String(Rope):
+    def _get_single_item(self, index):
+        return self.string[index]
+
     def __init__(self, string):
         self.string = string
     
@@ -44,9 +47,7 @@ class String(Rope):
 
     def __len__(self):
         return len(self.string)
-    
-    def _get_single_item(self, index):
-        return self.string[index]
+
 
 class Substring(Rope):
     def __init__(self, rope, start, length):
