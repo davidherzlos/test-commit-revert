@@ -62,9 +62,6 @@ class Concatenation(Rope):
     def __str__(self):
         return str(self.left) + str(self.right)
     
-    def length(self):
-        return self.left.length() + self.right.length()
-    
     def __len__(self):
         return len(self.left) + len(self.right)
 
